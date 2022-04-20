@@ -21,15 +21,17 @@ export default function SearchFilters() {
   const [filters, setFilters] = useState(filterData);
 
   const searchProperties = (filterValues) => {
-    // const path = router.pathname;
-    // const { query } = router;
-    // const values = getFilterValues(filterValues);
-    // values.forEach((item) => {
-    //   if (item.value && filterValues?.[item.name]) {
-    //     query[item.name] = item.value;
-    //   }
-    // });
-    // router.push({ pathname: path, query: query });
+    const path = router.pathname;
+    const { query } = router;
+    const values = getFilterValues(filterValues);
+
+    values.forEach((item) => {
+      if (item.value && filterValues?.[item.name]) {
+        query[item.name] = item.value;
+      }
+    });
+    // pudate url after filter
+    router.push({ pathname: path, query: query });
   };
 
   return (
