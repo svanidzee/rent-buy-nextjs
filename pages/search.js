@@ -24,8 +24,8 @@ const Search = ({ properties }) => {
         p="2"
         fontWeight="black"
         fontSize="lg"
-        justifyContent="center"
-        alignItems="center"
+        justify="center"
+        align="center"
       >
         <Text>Search Property By Filters</Text>
         <Icon paddingLeft="2" w="7" as={BsFilter} />
@@ -34,21 +34,15 @@ const Search = ({ properties }) => {
       <Text fontSize="2x1" p="4" fontWeight="bold">
         Properties {router.query.purpose}
       </Text>
-      <Flex flexWrap="wrap">
+      <Flex wrap="wrap">
         {properties.map((property) => (
           <Property property={property} key={property.id} />
         ))}
       </Flex>
       {properties.length === 0 && (
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          flexDir="column"
-          marginTop="5"
-          marginBottom="5"
-        >
-          <Image src={noresult} />
-          <Text fontSize="xl" marginTop="3">
+        <Flex justify="center" align="center" flexDir="column" mt="5" mb="5">
+          <Image src={noresult} alt="No result" />
+          <Text fontSize="xl" mt="3">
             No Result Found.
           </Text>
         </Flex>

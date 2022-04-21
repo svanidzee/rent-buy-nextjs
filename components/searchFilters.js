@@ -1,21 +1,7 @@
-import { useEffect, useState } from "react";
-import {
-  Flex,
-  Select,
-  Box,
-  Text,
-  Input,
-  Spinner,
-  Icon,
-  Button,
-} from "@chakra-ui/react";
-import { useRouter } from "next/router";
-import { MdCancel } from "react-icons/md";
-import Image from "next/image";
+import { useState } from "react";
+import { Flex, Select, Box } from "@chakra-ui/react";
 
 import { filterData, getFilterValues } from "../utils/filterData";
-import { baseUrl, fetchApi } from "../utils/fetchApi";
-import noresult from "../assets/noresult.svg";
 
 export default function SearchFilters() {
   const [filters, setFilters] = useState(filterData);
@@ -35,7 +21,7 @@ export default function SearchFilters() {
   };
 
   return (
-    <Flex bg="gray.100" p="4" justifyContent="center" flexWrap="wrap">
+    <Flex bg="gray.100" p="4" justify="center" wrap="wrap">
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
           <Select

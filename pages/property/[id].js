@@ -26,11 +26,11 @@ const PropertyDetails = ({
     photos,
   },
 }) => (
-  <Box maxWidth="1000px" margin="auto" p="4">
+  <Box maxW="1000px" m="auto" p="4">
     {photos && <ImageScrollbar data={photos} />}
     <Box w="full" p="6">
-      <Flex paddingTop="2" alignItems="center">
-        <Box paddingRight="3" color="green.400">
+      <Flex pt="2" align="center">
+        <Box pr="3" color="green.400">
           {isVerified && <GoVerified />}
         </Box>
         <Text fontWeight="bold" fontSize="lg">
@@ -50,7 +50,7 @@ const PropertyDetails = ({
         <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
       </Flex>
     </Box>
-    <Box marginTop="2">
+    <Box mt="2">
       <Text fontSize="lg" marginBottom="2" fontWeight="bold">
         {title}
       </Text>
@@ -58,13 +58,9 @@ const PropertyDetails = ({
         {description}
       </Text>
     </Box>
-    <Flex
-      flexWrap="wrap"
-      textTransform="uppercase"
-      justifyContent="space-between"
-    >
+    <Flex wrap="wrap" textTransform="uppercase" justify="space-between">
       <Flex
-        justifyContent="space-between"
+        justify="space-between"
         w="400px"
         borderBottom="1px"
         borderColor="gray.100"
@@ -74,7 +70,7 @@ const PropertyDetails = ({
         <Text fontWeight="bold">{type}</Text>
       </Flex>
       <Flex
-        justifyContent="space-between"
+        justify="space-between"
         w="400px"
         borderBottom="1px"
         borderColor="gray.100"
@@ -85,7 +81,7 @@ const PropertyDetails = ({
       </Flex>
       {furnishingStatus && (
         <Flex
-          justifyContent="space-between"
+          justify="space-between"
           w="400px"
           borderBottom="1px"
           borderColor="gray.100"
@@ -98,7 +94,7 @@ const PropertyDetails = ({
     </Flex>
     <Box>
       {amenities.length && (
-        <Text fontSize="2xl" fontWeight="black" marginTop="5">
+        <Text fontSize="2xl" fontWeight="black" mt="5">
           Facilites:
         </Text>
       )}
