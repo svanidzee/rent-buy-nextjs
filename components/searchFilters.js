@@ -16,7 +16,6 @@ export default function SearchFilters() {
         query[item.name] = item.value;
       }
     });
-    // pudate url after filter
     router.push({ pathname: path, query: query });
   };
 

@@ -7,7 +7,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import theme from "../lib/theme";
 
-// Prevent automatic page location restoration
 if (typeof window !== "undefined") {
   window.history.scrollRestoration = "manual";
 }
